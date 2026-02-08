@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+
+
+void ReadNumbers(float& a, float& b, float& c)
+{
+	cout << "Please Enter a  :" << endl;
+	cin >> a;
+	cout << "Please Enter b  :" << endl;
+	cin >> b;
+	cout << "Please Enter c  :" << endl;
+	cin >> c;
+}
+
+
+float calculateArea(float a,float b, float c)
+{
+	float p = (a + b + c) / 2;
+	const float pi = 3.1415926535;
+	float result = (a * b * c) / (4 * sqrt(p * (p - a) * (p - b) * (p - c)));
+	
+	float area = pi * pow(result, 2);
+	return area;
+		
+}
+
+void PrintArea(float area)
+{
+	cout << " The Area is :" << area << endl;
+
+	
+}
+
+int main()
+{
+	float a, b,c;
+	    ReadNumbers(a, b,c);
+		PrintArea(calculateArea(a,b,c));
+
+		return 0;
+}
