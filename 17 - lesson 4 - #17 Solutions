@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+
+
+void ReadNumbers(float& A, float& D)
+{
+	
+	cout << "Please Enter base  :" << endl;
+	cin >> A;
+
+	cout << "Please Enter heith  :" << endl;
+	cin >> D;
+
+	
+}
+
+
+float calculateArea(float A, float D)
+{
+	float result = 0.5 * (A * D);
+	return result;
+	
+}
+
+void PrintArea(float area)
+{
+	cout << " The Area is :" << area << endl;
+
+	
+}
+
+int main()
+{
+	float A, D;
+	
+	ReadNumbers(A, D);
+	
+	PrintArea(calculateArea(A,D));
+}
